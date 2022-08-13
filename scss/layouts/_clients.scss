@@ -1,0 +1,21 @@
+.clients__item {
+    width: calc((100% - 150px) / 6);
+  }
+  .clients__link {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    padding: 16px 32px;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    color: $icon-color;
+    transition: color $transition $timing-function,
+      border-color $transition $timing-function;
+  }
+  .clients__link:hover,
+  .clients__link:focus {
+    color: $brand-color;
+  }
+  .clients__logo {
+    fill: currentColor;
+  }

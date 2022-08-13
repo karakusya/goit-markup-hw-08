@@ -1,0 +1,63 @@
+.footer {
+    background: $background;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &.soc-media__link {
+      color: $white-color;
+      background-color: $icon-background;
+    }
+  }
+  .footer__container {
+    display: flex;
+    gap: 70px;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .footer__logo {
+    margin-bottom: 20px;
+  }
+  address {
+    font-style: normal;
+  }
+  .address__list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .address__map {
+    color: $white-color;
+  }
+  .address__link {
+    color: $transp-white;
+    transition: color $transition $timing-function;
+  }
+  .address__link:hover,
+  .address__link:focus {
+    color: $brand-color;
+  }
+  .footer__title {
+    margin-bottom: 20px;
+    color: $white-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+  }
+
+  .footer__input {
+    padding: 15px 16px;
+    width: 358px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 16px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.6);
+  }
+  form.footer__form {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+  }

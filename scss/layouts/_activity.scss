@@ -1,0 +1,22 @@
+.activity__item {
+    width: calc((100% - 60px) / 3);
+    position: relative;
+  }
+  
+  .activity__text {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 27px;
+    color: $white-color;
+    background-color: $activity-bgrd;
+  }
+  .activity__title{
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+  }
+  

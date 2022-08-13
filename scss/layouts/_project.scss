@@ -1,0 +1,69 @@
+.project-title {
+    margin-bottom: 4px;
+    color: $black-color;
+  
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+  .project-type {
+    font-size: 16px;
+    line-height: 1.87;
+  }
+  .project-text {
+    background: $white-color;
+    border: 1px solid $portfolio-border;
+    padding: 20px 24px;
+  }
+  
+  
+  
+  .project-item {
+    width: calc((100% - 60px) / 3);
+  }
+  
+  .card-item {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+  
+  .project-link {
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow $transition $timing-function;
+    &:hover, &:focus {    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);}
+  }
+  
+
+  
+  .overlay-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .project-overlay {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+  
+    color: $white-color;
+    background-color: $brand-background;
+  
+    transform: translateY(100%);
+    transition: transform $transition;
+
+    .project-link:hover &,
+    .project-link:focus &{    transform: translateX(0);
+  }
+  }
+  

@@ -1,0 +1,76 @@
+header {
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid $border;
+  }
+  
+  .header__container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 94px;
+  }
+  .nav__list {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    color: $black-color;
+  }
+  .nav__contact-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    transition: color $transition $timing-function;
+  }
+
+  .nav__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    transition: color $transition $timing-function;
+
+    &:hover, &:focus {color: $brand-color};
+  }
+ 
+  .nav__link--current {
+    position: relative;
+    color: $brand-color;
+
+    &::after {    position: absolute;
+        display: block;
+        bottom: -1px;
+        content: "";
+        width: 100%;
+        left: 0;
+        height: 4px;
+        border-radius: 4px;
+        background-color: $brand-color;}
+  }
+
+  .nav__contact-list {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-left: auto;
+
+  
+  }
+  .nav__contact-item{
+  &:hover, &:focus {color: $brand-color;}
+  }
+  .nav__contact-icon {
+    fill: currentColor;
+    align-self: center;
+
+    &:hover, &:focus {color: $brand-color}
+  }

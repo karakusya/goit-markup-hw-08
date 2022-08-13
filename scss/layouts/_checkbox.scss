@@ -1,0 +1,48 @@
+.check-box-container{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    gap: 8px;
+    align-items: center;
+  
+    margin-bottom: 30px;
+  }
+  
+  .check-box-btn:checked + .icon-checkbox .icon-uncheck {
+  opacity: 0;
+  transition: opacity $transition $timing-function;
+  }
+  
+  
+  .check-box-btn:checked + .icon-checkbox .icon-check{
+    opacity: 1;
+    }
+    .check-box-title{
+      user-select: none;
+      text-underline-position: under;
+    }
+  
+  .icon-check {
+    opacity: 0;
+    transition: opacity $transition $timing-function;
+  }
+  .icon-uncheck {
+    fill: currentColor;
+    transition: opacity $transition $timing-function, fill $transition $timing-function;
+  }
+  .check-box-btn:hover + .icon-checkbox .icon-uncheck, .check-box-btn:focus + .icon-checkbox .icon-uncheck{
+    fill: $brand-color;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
