@@ -4,17 +4,68 @@
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    background-image: linear-gradient(
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+      background-image:  linear-gradient(
         to right,
         $hero-shadow,
         $hero-shadow
       ),
-      url(../image/hero.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+      url(../image/hero@1x_sm.png);
+    
+      @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+      to right,
+      $hero-shadow,
+      $hero-shadow
+    ),
+    url(../image/hero@2x_sm.png);
   }
-  @media screen and (min-width: 1200px) {
+
+    @include mq(tab) {
+      background-image: linear-gradient(
+        to right,
+        $hero-shadow,
+        $hero-shadow
+      ),
+      url(../image/hero@1x_md.png);
+      @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+      to right,
+      $hero-shadow,
+      $hero-shadow
+    ),
+    url(../image/hero@2x_md.png);
+  }
+    }
+
+    @include mq(desk) {
+      background-image: linear-gradient(
+        to right,
+        $hero-shadow,
+        $hero-shadow
+      ),
+      url(../image/hero@1x_lg.png);
+      @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+      to right,
+      $hero-shadow,
+      $hero-shadow
+    ),
+    url(../image/hero@2x_lg.png);
+  }
+    }
+
+    }
+  @include mq(desk) {
     .hero__title{
       font-size:44px ;
     }
