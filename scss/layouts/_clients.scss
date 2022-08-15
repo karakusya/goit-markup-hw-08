@@ -1,5 +1,16 @@
 .clients__item {
+  width: 100%;
+  @media screen and (min-width: 480px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 60px) / 3);
+  }
+  @media screen and (min-width: 1200px) {
     width: calc((100% - 150px) / 6);
+  }
+
+
   }
   .clients__link {
     display: flex;

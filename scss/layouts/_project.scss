@@ -20,7 +20,12 @@
   
   
   .project-item {
-    width: calc((100% - 60px) / 3);
+    width: 100%;
+    @include mq(tab) {width: calc((100% - 30px) / 2);}
+    @include mq(desk) {    width: calc((100% - 60px) / 3);}
+
+
+
   }
   
   .card-item {

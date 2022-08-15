@@ -1,3 +1,12 @@
+
+  .activity{
+    display: none;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+
 .activity__item {
     width: calc((100% - 60px) / 3);
     position: relative;

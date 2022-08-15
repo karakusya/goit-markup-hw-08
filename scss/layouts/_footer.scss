@@ -10,9 +10,25 @@
   }
   .footer__container {
     display: flex;
+    flex-direction: column;
+    gap: 60px;
+    text-align: center;
+    
+  
+
+  @include mq(tab) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
     gap: 70px;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: center;
+    
+  }
+
+
+    
+
   }
   .footer__logo {
     margin-bottom: 20px;
@@ -47,7 +63,7 @@
 
   .footer__input {
     padding: 15px 16px;
-    width: 358px;
+    width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
@@ -55,9 +71,29 @@
     font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
+@include mq(mob) {
+  width: 450px;
+}
+@include mq(tab) {
+  width: 450px;
+}
+
+
+@include mq(desk) {
+  width: 358px;
+}
+
   }
   form.footer__form {
     display: flex;
-    gap: 12px;
+    flex-direction: column;
+    gap: 20px;
     align-items: baseline;
+    justify-content: center;
+    width: 100%;
+
+    @include mq(desk) {
+      flex-direction: row;
+      gap: 12px;
+    }
   }

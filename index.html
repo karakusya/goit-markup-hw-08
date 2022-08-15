@@ -51,7 +51,45 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-btn" aria-controls="menu" aria-expanded="false" data-menu-button>
+          <svg width="40" height="40" aria-label="Кнопка відкритя меню">
+            <use class="icon-cross modal-close" href="./image/symbol-defs.svg#icon-close"></use>
+            <use class="icon-menu" href="./image/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="menu" id="menu" data-menu>
+          <ul class="menu__nav list">
+            <li class="menu__item">
+              <a href="./index.html" class="link nav__link">Студія</a>
+            </li>
+            <li class="menu__item">
+              <a href="./portfolio.html" class="link nav__link">Портфоліо</a>
+            </li>
+            <li class="menu__item">
+              <a href="#address" class="link nav__link">Контакти</a>
+            </li>
+          </ul>
+          <ul class="list menu__contact-list ">
+            <li class="nav__contact-item menu__tel">
+              <a href="mailto:info@devstudio.com" class="link nav__contact-link"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="nav__contact-item menu__email">
+              <a href="tel:+380961111111" class="link nav__contact-link"
+                >+38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+          <ul class="menu__soc list">
+            <li class="menu__soc-item"><a href="" target="_blank" rel="noreferrer noopener" class="menu__soc-link link">Instagram</a></li>
+            <li class="menu__soc-item"><a href="" target="_blank" rel="noreferrer noopener" class="menu__soc-link link">Twitter</a></li>
+            <li class="menu__soc-item"><a href="" target="_blank" rel="noreferrer noopener" class="menu__soc-link link">Facebook</a></li>
+            <li class="menu__soc-item"><a href="" target="_blank" rel="noreferrer noopener" class="menu__soc-link link">LinkedIn</a></li>
+          </ul>
+        </div>
       </div>
+
     </header>
     <main>
       <section class="hero">
@@ -63,7 +101,7 @@
       <section class="section characteristic">
         <div class="container">
           <h2 class="hidden__title">особливості</h2>
-          <ul class="list card-set">
+          <ul class="list characteristic__list card-set">
             <li class="characteristic__item">
               <div class="characteristic__container">
                 <svg class="characteristic__img" width="70" height="70">
@@ -144,13 +182,14 @@
       <section class="section team">
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
-          <ul class="list card-set">
+          <ul class="list team__list card-set">
             <li class="team__item">
               <img
                 class="team__img"
-                src="./image/img4.jpg"
+                srcset="./image\team1@1x_sm.jpg 1x, ./image\team1@2x_sm.jpg 2x"
+                src="./image\team1@1x_sm.jpg"
                 alt="Ігор Дем'яненко"
-                width="270"
+                width="450"
               />
               <h3 class="team__name">Ігор Дем'яненко</h3>
               <p class="team__role">Product Designer</p>
@@ -496,5 +535,6 @@
     </div>
   
     <script src="./js/modal.js"> </script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

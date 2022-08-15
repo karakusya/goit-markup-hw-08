@@ -1,76 +1,216 @@
 header {
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    border-bottom: 1px solid $border;
-  }
-  
-  .header__container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav {
-    display: flex;
-    align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid $border;
+}
+
+.header__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 86px;
+
+  @include mq(desk) {
     gap: 94px;
   }
-  .nav__list {
+}
+.nav__list {
+  display: none;
+  align-items: center;
+
+  color: $black-color;
+
+  @include mq(tab) {
     display: flex;
-    align-items: center;
+    gap: 54px;
+  }
+  @include mq(desk) {
     gap: 50px;
-    color: $black-color;
   }
-  .nav__contact-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-bottom: 32px;
-    padding-top: 32px;
-    transition: color $transition $timing-function;
-  }
+}
+.nav__contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
-  .nav__link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-bottom: 32px;
-    padding-top: 32px;
-    transition: color $transition $timing-function;
+  transition: color $transition $timing-function;
+}
 
-    &:hover, &:focus {color: $brand-color};
+.nav__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 32px;
+  padding-top: 32px;
+  transition: color $transition $timing-function;
+  @include mq(mob-only) {
+    padding: 0;
   }
- 
-  .nav__link--current {
-    position: relative;
+  &:hover,
+  &:focus {
     color: $brand-color;
+  }
+}
 
-    &::after {    position: absolute;
-        display: block;
-        bottom: -1px;
-        content: "";
-        width: 100%;
-        left: 0;
-        height: 4px;
-        border-radius: 4px;
-        background-color: $brand-color;}
+.nav__link--current {
+  position: relative;
+  color: $brand-color;
+
+  &::after {
+    position: absolute;
+    display: block;
+    bottom: -1px;
+    content: "";
+    width: 100%;
+    left: 0;
+    height: 4px;
+    border-radius: 4px;
+    background-color: $brand-color;
   }
 
-  .nav__contact-list {
+  @include mq(mob-only) {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.nav__contact-list {
+  display: none;
+  margin-left: auto;
+
+  @include mq(tab) {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  @include mq(desk) {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 50px;
-    margin-left: auto;
+  }
+}
+.nav__contact-item {
+  &:hover,
+  &:focus {
+    color: $brand-color;
+  }
+}
+.nav__contact-icon {
+  fill: currentColor;
+  align-self: center;
 
-  
+  &:hover,
+  &:focus {
+    color: $brand-color;
   }
-  .nav__contact-item{
-  &:hover, &:focus {color: $brand-color;}
-  }
-  .nav__contact-icon {
-    fill: currentColor;
-    align-self: center;
+}
 
-    &:hover, &:focus {color: $brand-color}
+.menu-btn {
+  display: inline-flex;
+
+  margin: 0;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  margin-left: auto;
+  @include mq(tab) {
+    display: none;
   }
+  z-index: 3;
+}
+.menu-btn .icon-cross {
+  display: none;
+}
+
+.menu-btn.is-open .icon-cross {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: block;
+}
+.menu-btn.is-open .icon-menu {
+  display: none;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: $white-color;
+  padding: 48px 40px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity $transition $timing-function,
+    visibility $transition $timing-function;
+  transform: translatex(100%);
+  transition: transform $transition;
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translatex(0);
+  }
+}
+
+.menu__nav {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $black-color;
+  margin-bottom: 302px;
+}
+.menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.icon-cross {
+  transition: color $transition $timing-function;
+  &hover,
+  &focus {
+    color: $brand-color;
+  }
+}
+
+.menu__tel {
+  font-size: 34px;
+
+  margin-bottom: 32px;
+}
+
+.menu__email {
+  font-size: 24px;
+}
+
+.menu__contact-list {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 64px;
+}
+
+.menu__soc {
+  display: flex;
+  flex-wrap: wrap;
+  color: $brand-color;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+}
+
+.menu__soc-item:not(:last-child) .menu__soc-link {
+  display: flex;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  margin-right: 10px;
+}

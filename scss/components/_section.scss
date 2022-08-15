@@ -1,7 +1,15 @@
 .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  @include mq(desk) {
+    
     padding-top: 94px;
     padding-bottom: 94px;
   }
+
+  
+}
+
   .hidden__title {
     position: absolute;
     width: 1px;
@@ -18,7 +26,14 @@
     color: $black-color;
     text-align: center;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.17;
     margin-bottom: 50px;
+  @include mq(desk) {
+    
+      font-size: 36px;
+    
   }
+}
+  
+  

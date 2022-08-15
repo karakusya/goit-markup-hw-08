@@ -1,4 +1,5 @@
 @import "./utils/vars";
+@import "./utils/mixin";
 @import "./base/base";
 @import "./base/card-set";
 @import "./base/reset";
@@ -15,6 +16,7 @@
 @import "./layouts/filter";
 @import "./layouts/footer";
 @import "./layouts/header";
+@import "./layouts/menu";
 @import "./layouts/hero";
 @import "./layouts/project";
 @import "./layouts/team";
