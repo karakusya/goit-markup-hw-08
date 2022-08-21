@@ -15,6 +15,7 @@
     background: $white-color;
     border: 1px solid $portfolio-border;
     padding: 20px 24px;
+    flex-grow: 1;
   }
   
   
@@ -34,9 +35,11 @@
   
   .project-link {
     display: flex;
+    height: 100%;
     flex-direction: column;
     transition: box-shadow $transition $timing-function;
-    &:hover, &:focus {    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    &:hover, &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);}
   }
   
@@ -50,6 +53,7 @@
   .project-overlay {
     display: flex;
     position: absolute;
+
     top: 0;
     left: 0;
     width: 100%;
@@ -58,8 +62,8 @@
     line-height: 1.5;
     text-align: center;
     align-items: center;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 24px;
+  
   
     color: $white-color;
     background-color: $brand-background;
@@ -70,5 +74,10 @@
     .project-link:hover &,
     .project-link:focus &{    transform: translateX(0);
   }
+  }
+  .overlay_text {
+    width: 100%;
+    overflow: auto;
+    
   }
   

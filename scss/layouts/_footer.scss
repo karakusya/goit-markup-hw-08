@@ -3,10 +3,7 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
-    &.soc-media__link {
-      color: $white-color;
-      background-color: $icon-background;
-    }
+    
   }
   .footer__container {
     display: flex;
@@ -14,6 +11,7 @@
     gap: 60px;
     text-align: center;
     
+    justify-content: space-between;
   
 
   @include mq(tab) {
@@ -21,15 +19,21 @@
     flex-direction: row;
     flex-wrap: wrap;  
     gap: 70px;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
+
+   
     
   }
-
-
-    
-
+  @include mq(desk) {
+    text-align: left; 
+    .footer__item:last-child {
+    margin-left: auto;
   }
+  }
+  }
+ 
+
   .footer__logo {
     margin-bottom: 20px;
   }
@@ -63,6 +67,7 @@
 
   .footer__input {
     padding: 15px 16px;
+    
     width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -83,11 +88,15 @@
   width: 358px;
 }
 
+
+
   }
+
   form.footer__form {
     display: flex;
     flex-direction: column;
     gap: 20px;
+  
     align-items: baseline;
     justify-content: center;
     width: 100%;
