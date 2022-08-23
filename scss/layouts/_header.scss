@@ -160,6 +160,8 @@ header {
   left: 0;
   width: 100%;
   height: 100vh;
+  overflow: auto;
+  gap: 64px;
   background-color: $white-color;
   padding: 48px 40px;
 
@@ -221,7 +223,7 @@ header {
 .menu__contact-list {
   font-weight: 500;
   letter-spacing: 0.02em;
-  margin-bottom: 64px;
+ 
 }
 
 .menu__soc {
